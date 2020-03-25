@@ -1,32 +1,16 @@
-// Fizz Buzz with for loop
-for(i = 1; i <= 100; i++)
-{
-  if(!(i % 3) && !(i % 5)){
-    console.log("FizzBuzz!");
-  }
-  else if(!(i % 3)){
-    console.log("Fizz!");
-  }
-  else if(!(i % 5)){
-    console.log("Buzz");
-  }
-  else{
-    console.log(i);
-  }
-}
+// Prompt for name
+const name = prompt("Please tell me your name.");
 
-// Create an empty object
-const myObject = {
-}
-// Use confirm() to set a boolean value inside that object
-myObject.message = confirm("Press a button!\nEither OK or Cancel.");
+// Create function
+const greeting = function() {
+  console.log(`Good ${arguments["0"]} ${arguments["1"]}!`);
+};
 
-if(myObject.message == true){
-  console.log("You pressed OK!");
-}
-else{
-  console.log("You pressed cancel!");
-}
+greeting("morning", name);
 
+// Create an object that would hold the data.
+const greeterDB = {
+  userGreeting: greeting("morning", name)
+};
 
-
+greeting(greeterDB);
